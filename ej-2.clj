@@ -1,7 +1,7 @@
 ;; 2. Definir la función segundos que reciba los cuatro valores (días, horas, minutos y segundos) del tiempo que dura un evento y devuelva el valor de ese tiempo expresado solamente en segundos.
 ;; Sin sobrecarga
 (defn segundos [d h m s] (+ (* d 24 60 60) (* h 60 60) (* m 60) s))
-
+;; Con sobrecarga
 (defn segundos_sobrecarga 
   ([segs] segs)
   ([mins, segs] (segundos_sobrecarga (+ segs (* mins 60))))
